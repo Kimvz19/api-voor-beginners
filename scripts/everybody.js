@@ -29,7 +29,7 @@ allPersons.forEach(person =>{
 
 
 
-    console.log(afgerondGetaltussen1en5);
+    // console.log(afgerondGetaltussen1en5);
 
 
     // if , else voor  met de placeholder maar van 1 optie 

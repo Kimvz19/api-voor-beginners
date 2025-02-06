@@ -1,17 +1,19 @@
-// getData(myURL).then(data208 => {
-//     let myBirthday = data208.data;
-//     let myAddBirthday = myBirthday.birthday;
-//     console.log(myAddBirthday);
 
-    
-//     let addBirthday = document.createElement("p");
+getData(myURL).then(data208 => {
+    const myData = data208.data;
+    let myBirthdate = myData.birthdate;
+    let mySection = document.querySelector("section:nth-of-type(1)");
 
-//     let mySection = document.querySelector("section:nth-of-type(1)");
-
-//     mySection.appendChild(addBirthday);
-// });
-
-
+    if (mySection) { 
+        let myaddBirthday = document.createElement("time"); // Maak een nieuw `time` element
+        myaddBirthday.textContent = `🎉 ${myBirthdate}`;
+        myaddBirthday.dateTime = myBirthdate;
+        mySection.append(myaddBirthday);
+        
+    } else {
+        console.error(" birthdaydate is ");
+    }
+});
 
 
 
