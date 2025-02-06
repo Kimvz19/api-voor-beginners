@@ -1,15 +1,36 @@
 // api documentation: https://whois.fdnd.nl/docs/
 
-// 1 persoon: https://fdnd.directus.app/items/person/67
+// 1 persoon: https://fdnd.directus.app/items/person/208
 // iedereen: https://fdnd.directus.app/items/person/?fields=id,name,github_handle,avatar&filter={%22squads%22:{%22squad_id%22:{%22name%22:%22Minor%20Web%20Dev%22}}}&sort=name
 
+
+//Variabelen voor de volledige URL
 const baseURL = 'https://fdnd.directus.app/';
-const endpointMe = 'items/person/67';
+const endpointMe = 'items/person/208';
 
 
+const myURL = baseURL + endpointMe ;
+
+//makkelijke manier om url te zien 
+//console.log(myURL); 
 
 
+//Door deze manier is het mogelijk om de data ook weer te geven
+// de punt is een filter option
+getData(myURL).then( data208 =>{
+	//console.log(data208.data.name);
 
+	//selecteert de h1 uit de html 
+	let deH1 = document.querySelector("h1");
+
+	//filtert de uit de data van id 208 de naam 
+	let myName = data208.data.name;
+
+	//variabelen overschrijven elkaar 
+	deH1.textContent = myName;
+
+	//console.log(myName);
+} );
 
 
 
