@@ -18,13 +18,45 @@ allPersons.forEach(person =>{
     //filtert namen 
     // console.log(person.name);
     
+    let personName = person.name;
+    let personImg = person.avatar;
+    let personWeb = person.website;
+
+    let getalTussen0en1 =  Math.random();
+    let getalTussen1en5 = getalTussen0en1 * 5;
+    let afgerondGetaltussen0en4 = Math.floor(getalTussen1en5);
+    let afgerondGetaltussen1en5 = afgerondGetaltussen0en4 + 1;
+
+
+
+    console.log(afgerondGetaltussen1en5);
+
+
+    // if , else voor  met de placeholder maar van 1 optie 
+    if (personImg){
+        //do nothing
+    // zo niet gebruik dan default image
+    } else{
+        personImg= `images/placeholder$(afgerondGetaltussen1en5).svg`;
+    }
+
+
+    if (personWeb){
+        // do nothing
+
+    } else{
+        personWeb = fallbackWebsite;
+
+    }
 
     let personHTML = `<article>
-    <h3>Krijn Hoetmer</h3>
-    <img src="images/placeholder1.svg" alt="Krijn Hoetmer">
-    <a href="https://krijnhoetmer.nl" aria-label="de website van Krijn Hoetmer">website</a>
+    <h3>${personName}</h3>
+    <img src="${personImg}" alt="${personName}">
+    <a href="${personWeb}" aria-label="de website van Krijn Hoetmer">website</a>
   </article>`;
 
+  //beforeeend voegt het voor het einde van het element
+  //insert Adjacent betekent aangrenzend aan elkaar inserten
   everybodySection.insertAdjacentHTML('beforeend', personHTML);
 
 })
