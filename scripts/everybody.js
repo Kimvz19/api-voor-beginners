@@ -37,7 +37,7 @@ allPersons.forEach(person =>{
         //do nothing
     // zo niet gebruik dan default image
     } else{
-        personImg= `images/placeholder$(afgerondGetaltussen1en5).svg`;
+        personImg = `images/placeholder${afgerondGetaltussen1en5}.svg`;
     }
 
 
