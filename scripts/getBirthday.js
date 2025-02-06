@@ -1,4 +1,15 @@
+// getData(myURL).then(data208 => {
+//     let myBirthday = data208.data;
+//     let myAddBirthday = myBirthday.birthday;
+//     console.log(myAddBirthday);
 
+    
+//     let addBirthday = document.createElement("p");
+
+//     let mySection = document.querySelector("section:nth-of-type(1)");
+
+//     mySection.appendChild(addBirthday);
+// });
 
 
 
